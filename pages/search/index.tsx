@@ -2,7 +2,7 @@ import * as React from "react";
 import { Component, Fragment } from "react";
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import Head from "next/head";
-import styles from "@/styles/Search.module.css";
+import styles from "../../styles/Search.module.css";
 import Image from "next/image";
 import Statsboard from "@/components/Statsboard";
 import { StringCutter } from "@/utilities/stringCutter";
