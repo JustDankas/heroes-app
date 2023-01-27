@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Component } from "react";
-import styles from "@/styles/Statsboard.module.css";
+import styles from "../styles/Statsboard.module.css";
 import { BellCurve } from "@/utilities/bell_curve_function";
 interface IStat {
   label: string;

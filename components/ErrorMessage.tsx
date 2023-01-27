@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Component } from "react";
-import styles from "@/styles/Error.module.css";
+import styles from "../styles/Error.module.css";
 interface IErrorMessage {
   error: string;
   destroy: () => void;
