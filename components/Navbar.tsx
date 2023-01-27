@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Component, Fragment } from "react";
-import styles from "../styles/Navbar.module.css";
+import styles from "./styles/Navbar.module.css";
 import Link from "next/link";
 import logo from "@/public/logo.png";
 import Image from "next/image";
