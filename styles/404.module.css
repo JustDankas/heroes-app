@@ -1,0 +1,17 @@
+.main {
+  height: 100vh;
+  background-color: var(--primary);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-md);
+}
+.main h1 {
+  border-right: 1px solid var(--white);
+  padding: 0 10px;
+  color: var(--secondary);
+}
+.main p {
+  padding: 0 10px;
+}
