@@ -1,7 +1,7 @@
 import Head from "next/head";
 import * as React from "react";
 import { Component, useState, useEffect } from "react";
-import styles from "@/styles/Heroes.module.css";
+import styles from "@/styles/Game.module.css";
 import axios from "axios";
 import Image from "next/image";
 import { useRouter } from "next/router";
