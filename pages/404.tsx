@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Component } from "react";
-import styles from "@/styles/404.module.css";
+import styles from "../styles/404.module.css";
 import Head from "next/head";
 import { Fragment } from "react";
 function NotFoundPage() {
