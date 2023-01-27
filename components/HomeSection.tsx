@@ -1,7 +1,7 @@
 import Image from "next/image";
 import * as React from "react";
 import { Component } from "react";
-import styles from "@/styles/home.module.css";
+import styles from "@/styles/homeSection.module.css";
 interface IImageSize {
   xs: string;
   sm: string;

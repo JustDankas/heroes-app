@@ -1,11 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "@/styles/home.module.css";
-import axios from "axios";
 import HomeSection from "@/components/HomeSection";
 import Link from "next/link";
-import heroesImage from "@/public/heroes.png";
-import heroHeading from "@/public/heroHeading.png";
 import { Fragment } from "react";
 import heroesData from "@/heroes2.json";
 import villainsData from "@/villains.json";

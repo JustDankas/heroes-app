@@ -5,7 +5,6 @@ import styles from "@/styles/heroes.module.css";
 import axios from "axios";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import heroesImage from "@/public/heroes.png";
 import Link from "next/link";
 import { Fragment } from "react";
 import { StringCutter } from "@/utilities/stringCutter";

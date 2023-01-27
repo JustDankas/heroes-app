@@ -54,19 +54,7 @@
   font-size: 22px;
   line-height: 40px;
 }
-.list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-}
-.list li img {
-  width: 12vw;
-}
-.list > * {
-  margin: 0;
-  padding: 0;
-}
+
 .blackscreen,
 .villainscreen {
   position: absolute;
