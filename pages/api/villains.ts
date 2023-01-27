@@ -9,8 +9,8 @@ export default async function handler(
     "https://superhero-search.p.rapidapi.com/api/villains",
     {
       headers: {
-        "X-RapidAPI-Key": "ba006d25d3mshb73a35184cd604fp10709ejsn19ad616aa591",
-        "X-RapidAPI-Host": "superhero-search.p.rapidapi.com",
+        "X-RapidAPI-Key": process.env.RapidAPI_Key || "",
+        "X-RapidAPI-Host": process.env.RapidAPI_Host || "",
       },
     }
   );
