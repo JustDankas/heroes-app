@@ -21,13 +21,14 @@ function Navbar() {
   const [type, setType] = React.useState(Character.null);
   const [error, setError] = React.useState("");
   function handleSearch() {
-    if (type === Character.null) {
-      setError("Please specify keywords 'Hero' or 'Villain'");
-      return;
-    }
+    // if (type === Character.null) {
+    //   setError("Please specify keywords 'Hero' or 'Villain'");
+    //   return;
+    // }
     setSearching(false);
     router.push(
-      `/search?${type === Character.hero ? "hero" : "villain"}=${search}`
+      `/search?hero=${search}`
+      // `/search?${type === Character.hero ? "hero" : "villain"}=${search}`
     );
   }
 
@@ -36,21 +37,21 @@ function Navbar() {
   }
 
   function handleSearchChange(str: string) {
-    if (type === Character.null) {
-      const heroRegex = new RegExp(/hero/, "i");
-      const villainRegex = new RegExp(/villain/, "i");
-      if (heroRegex.test(str)) {
-        setType(Character.hero);
-        setSearch("");
-        return;
-      }
-      if (villainRegex.test(str)) {
-        setType(Character.villain);
-        setSearch("");
-        return;
-      }
-      setSearch(str);
-    }
+    // if (type === Character.null) {
+    //   const heroRegex = new RegExp(/hero/, "i");
+    //   const villainRegex = new RegExp(/villain/, "i");
+    //   if (heroRegex.test(str)) {
+    //     setType(Character.hero);
+    //     setSearch("");
+    //     return;
+    //   }
+    //   if (villainRegex.test(str)) {
+    //     setType(Character.villain);
+    //     setSearch("");
+    //     return;
+    //   }
+    //   setSearch(str);
+    // }
     setSearch(str);
   }
   return (
@@ -92,7 +93,7 @@ function Navbar() {
             value={search}
             onChange={(e) => handleSearchChange(e.target.value)}
           />
-          <div className={styles.spansContainer}>
+          {/* <div className={styles.spansContainer}>
             {type === Character.null && (
               <button
                 className={styles.btnUnchecked}
@@ -126,7 +127,7 @@ function Navbar() {
                 Villain <RxCross1 className={styles.icon} />
               </button>
             )}
-          </div>
+          </div> */}
           <button className={styles.cross} onClick={() => setSearching(false)}>
             <RxCross1 />
           </button>

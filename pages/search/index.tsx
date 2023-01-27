@@ -192,14 +192,16 @@ export default CharacterDetailsPage;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { query } = context;
-  const { hero, villain } = query;
-  if (!hero && !villain)
+  const { hero } = query;
+  // const { hero, villain } = query;
+  if (!hero)
     return {
       notFound: true,
     };
   const response = await fetch(
-    `https://superhero-search.p.rapidapi.com/api/?${
-      hero ? "hero=" + hero : "villain=" + villain
+    `https://superhero-search.p.rapidapi.com/api/?hero=${
+      // hero ? "hero=" + hero : "villain=" + villain
+      hero
     }`,
     {
       headers: {
