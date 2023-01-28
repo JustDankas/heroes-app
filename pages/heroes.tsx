@@ -76,6 +76,7 @@ function HeroesPage({ data }: IHeroPage) {
   useEffect(() => {
     if (heroName === "?") return;
     setTimeout(() => {
+      setHero(heroes[round + 1]);
       setShowHint(false);
       setRound((prev) => prev + 1);
       setHeroName("?");
@@ -83,9 +84,9 @@ function HeroesPage({ data }: IHeroPage) {
     }, 3000);
   }, [heroName]);
 
-  React.useEffect(() => {
-    setHero(heroes[round]);
-  }, [round, heroes]);
+  // React.useEffect(() => {
+
+  // }, [round, heroes]);
 
   function handleKeyDown(key: String) {
     if (key === "Enter") submitAnswear();
@@ -108,12 +109,14 @@ function HeroesPage({ data }: IHeroPage) {
       >
         <div className={styles.imageContainer}>
           <h1>{heroName}</h1>
-          <Image
-            src={hero.images.lg}
+          {/* <Image
+            src={hero.images.md}
             alt="superhero"
             width={360}
             height={480}
-          />
+            priority
+          /> */}
+          <img src={hero.images.md} alt="superhero" width={360} height={480} />
         </div>
         <div className={styles.flexRow}>
           <input
