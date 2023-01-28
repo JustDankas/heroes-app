@@ -105,12 +105,14 @@ function VillainsPage({ data }: IHeroPage) {
       >
         <div className={styles.imageContainer}>
           <h1>{heroName}</h1>
-          <Image
+          {/* <Image
             src={hero.images.lg}
             alt="superhero"
             width={360}
             height={480}
-          />
+            priority
+          /> */}
+          <img src={hero.images.md} alt="superhero" width={360} height={480} />
         </div>
         <div className={styles.flexRow}>
           <input

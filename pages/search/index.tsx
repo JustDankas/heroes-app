@@ -73,10 +73,16 @@ function CharacterDetailsPage({ data, role }: ICharacterDetailsPage) {
         <div className={styles.heroCard}>
           <div className={styles.flexCol}>
             <div className={styles.imageContainer}>
-              <Image
+              {/* <Image
                 src={data.images.md}
                 alt={data.name}
                 width={320}
+                height={480}
+              /> */}
+              <img
+                src={data.images.md}
+                alt="superhero"
+                width={360}
                 height={480}
               />
             </div>

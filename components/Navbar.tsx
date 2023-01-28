@@ -20,6 +20,7 @@ function Navbar() {
   const router = useRouter();
   const [type, setType] = React.useState(Character.null);
   const [error, setError] = React.useState("");
+  const inputRef = React.useRef<HTMLInputElement>(null);
   function handleSearch() {
     // if (type === Character.null) {
     //   setError("Please specify keywords 'Hero' or 'Villain'");
@@ -34,6 +35,11 @@ function Navbar() {
 
   function handleEnter(key: string) {
     if (key === "Enter") handleSearch();
+  }
+
+  function handleNavSearchButton() {
+    setSearching(true);
+    inputRef.current?.select();
   }
 
   function handleSearchChange(str: string) {
@@ -70,7 +76,10 @@ function Navbar() {
           Villain Attack
         </Link>
         <div className={styles.searchBtnContainer}>
-          <button className={styles.row} onClick={() => setSearching(true)}>
+          <button
+            className={styles.row}
+            onClick={() => handleNavSearchButton()}
+          >
             SEARCH{" "}
             <BsSearch
               style={{
@@ -86,6 +95,7 @@ function Navbar() {
           }}
         >
           <input
+            ref={inputRef}
             className={styles.searchInput}
             type="text"
             // placeholder=""
