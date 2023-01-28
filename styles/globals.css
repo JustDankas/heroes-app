@@ -119,3 +119,10 @@ a {
 * {
   font-family: "Outfit", sans-serif;
 }
+footer {
+  background-color: var(--dark);
+  color: var(--white);
+  text-align: center;
+  font-size: var(--font-md);
+  padding: 10px 0;
+}
